@@ -5,6 +5,7 @@ import Tabs from '../components/Tabs'
 import Hamburger from 'hamburger-react'
 import { Container } from '../styles/texts'
 
+
 const Navbar = () => {
   const [width, setWidth] = useState(window.innerWidth)
   useEffect(() => {

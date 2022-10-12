@@ -6,7 +6,7 @@ import pisos from "../assets/pisosmin/pisos1-min.jpeg";
 
 const Complements = () => {
   return (
-    <Section>
+    <Section id="complements">
       <Wrapper>
       {/* <Parallax speed={8}> */}
         <Images>

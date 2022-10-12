@@ -1,17 +1,30 @@
 import React from "react";
 import styled from "styled-components";
+import { Link } from "react-scroll";
 
 const Tabs = ({ mode }) => {
   return (
     <TabsBox mode={mode}>
-      <LinkL>COMPLEMENTOS</LinkL>
-      <LinkL>RESERVAS</LinkL>
-      <LinkL>GALERIA</LinkL>
+      <Link
+        to="complements"
+        spy={true}
+        smooth={false}
+        offset={-47}
+        duration={800}
+      >
+        <LinkL>COMPLEMENTOS</LinkL>
+      </Link>
+      <Link to="form" spy={true} smooth={false} offset={150} duration={800}>
+        <LinkL>RESERVAS</LinkL>
+      </Link>
+      <Link to="gallery" spy={true} smooth={false} offset={-47} duration={800}>
+        <LinkL>GALERIA</LinkL>
+      </Link>
     </TabsBox>
   );
 };
 
- const LinkL = styled.a`
+const LinkL = styled.a`
   font-weight: 400;
   font-size: 13px;
   letter-spacing: 2px;
@@ -28,15 +41,15 @@ const Tabs = ({ mode }) => {
     font-size: 14px;
     line-height: 32px;
   }
-`
+`;
 
 const TabsBox = styled.div`
-  display: ${(props) => (props.mode == "large" ? "flex" : "block")};
+  display: ${(props) => (props.mode === "large" ? "flex" : "block")};
   align-items: center;
   text-align: center;
 
   a {
-    padding: ${(props) => (props.mode == "large" ? "0 20px" : "20px 0")};
+    padding: ${(props) => (props.mode === "large" ? "0 20px" : "20px 0")};
     display: flex;
     align-items: center;
     img {

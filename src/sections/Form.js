@@ -39,7 +39,7 @@ const Form = () => {
   return (
     <>
        <Parallax speed={-8}>
-      <FormWrapper id="contact">
+      <FormWrapper id="form">
         <StyledForm onSubmit={handleSubmit}>
           <Input
             placeholder="NOMBRE Y APELLIDO"
@@ -114,8 +114,7 @@ const Form = () => {
             <span className="checkmark"></span>
           </label>
 
-          <br />
-          <br />
+     
 
           <Button type="submit">ENVIAR</Button>
         </StyledForm>
@@ -166,14 +165,14 @@ const Input = styled.input`
   color: grey;
 `;
 const Button = styled.button`
-  color: grey;
+  color: white;
   font-size: 0.9em;
   background-color: #C3B091;
   border-radius: 30px;
   border: #C3B091;
-  margin-bottom: 130px;
-  padding: 10px;
-  width: 150px;
+  padding: 5px;
+  width: 130px;
+  margin-top:30px;
 `;
 
 export default Form;
