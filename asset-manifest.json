@@ -1,22 +1,35 @@
 {
   "files": {
-    "main.css": "/chillout/static/css/main.8f002653.css",
-    "main.js": "/chillout/static/js/main.de56558f.js",
+    "main.css": "/chillout/static/css/main.7a3ce693.css",
+    "main.js": "/chillout/static/js/main.078c4cc8.js",
     "static/js/787.96b1b080.chunk.js": "/chillout/static/js/787.96b1b080.chunk.js",
     "static/media/Foto-620-min.jpg": "/chillout/static/media/Foto-620-min.458134926ff28ba56f9b.jpg",
-    "static/media/Foto-618-min.jpg": "/chillout/static/media/Foto-618-min.2030b2200a5153e2026a.jpg",
+    "static/media/portada.jpeg": "/chillout/static/media/portada.804eccb3a4904052ba03.jpeg",
     "static/media/Foto-623-min.jpg": "/chillout/static/media/Foto-623-min.a6a5d505e868fb06b0a6.jpg",
-    "static/media/Foto-610-min.jpg": "/chillout/static/media/Foto-610-min.4644326d27eb66f73da9.jpg",
-    "static/media/Foto-611-min.jpg": "/chillout/static/media/Foto-611-min.8e70e816f9f425aa7565.jpg",
-    "static/media/Foto-613-min.jpg": "/chillout/static/media/Foto-613-min.e6dd3c5ee8f7b57dc8e3.jpg",
+    "static/media/Foto-615-min.jpg": "/chillout/static/media/Foto-615-min.4d9ab42cf3ad105175e5.jpg",
+    "static/media/Foto-716-min.jpg": "/chillout/static/media/Foto-716-min.c0cb66a603dbdf5a08ec.jpg",
+    "static/media/Foto-1383-min.jpg": "/chillout/static/media/Foto-1383-min.034c28e7a45586d2a7c1.jpg",
+    "static/media/Baja-179-min.jpg": "/chillout/static/media/Baja-179-min.55213e57af617813e17b.jpg",
+    "static/media/Baja-136-min.jpg": "/chillout/static/media/Baja-136-min.d54c298324c4204489f2.jpg",
+    "static/media/Baja-170-min.jpg": "/chillout/static/media/Baja-170-min.1e137c18af1cc61df441.jpg",
+    "static/media/Baja-139-min.jpg": "/chillout/static/media/Baja-139-min.e2106627954945049a72.jpg",
     "static/media/pisos1-min.jpeg": "/chillout/static/media/pisos1-min.2dc68c36d6d0a9876d23.jpeg",
+    "static/media/Baja-175-min.jpg": "/chillout/static/media/Baja-175-min.eb40303eb1082308a69b.jpg",
+    "static/media/Baja-180-min.jpg": "/chillout/static/media/Baja-180-min.5116cefc349fb22f2cff.jpg",
+    "static/media/Baja-124-min.jpg": "/chillout/static/media/Baja-124-min.aa76122d0d2a07ecca2f.jpg",
+    "static/media/Baja-182-min.jpg": "/chillout/static/media/Baja-182-min.236f3a88a064ce168d9a.jpg",
+    "static/media/Baja-141-min.jpg": "/chillout/static/media/Baja-141-min.7e6a4fe74bab4167ba48.jpg",
+    "static/media/Baja-172-min.jpg": "/chillout/static/media/Baja-172-min.4d750d8c5c0606b1cf25.jpg",
+    "static/media/Baja-138-min.jpg": "/chillout/static/media/Baja-138-min.921473e38b7e22aed48c.jpg",
+    "static/media/Baja-269-min.jpg": "/chillout/static/media/Baja-269-min.b2538c9bbda4958045d3.jpg",
+    "static/media/Baja-200-min.jpg": "/chillout/static/media/Baja-200-min.c86c4c9c28efa59505b6.jpg",
     "index.html": "/chillout/index.html",
-    "main.8f002653.css.map": "/chillout/static/css/main.8f002653.css.map",
-    "main.de56558f.js.map": "/chillout/static/js/main.de56558f.js.map",
+    "main.7a3ce693.css.map": "/chillout/static/css/main.7a3ce693.css.map",
+    "main.078c4cc8.js.map": "/chillout/static/js/main.078c4cc8.js.map",
     "787.96b1b080.chunk.js.map": "/chillout/static/js/787.96b1b080.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.8f002653.css",
-    "static/js/main.de56558f.js"
+    "static/css/main.7a3ce693.css",
+    "static/js/main.078c4cc8.js"
   ]
 }
