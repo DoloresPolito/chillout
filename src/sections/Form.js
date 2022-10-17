@@ -39,7 +39,9 @@ const Form = () => {
   return (
     <>
        <Parallax speed={-8}>
+       <Title>COTIZÁ TU EVENTO</Title>
       <FormWrapper id="form">
+
         <StyledForm onSubmit={handleSubmit}>
           <Input
             placeholder="NOMBRE Y APELLIDO"
@@ -124,8 +126,20 @@ const Form = () => {
   );
 };
 
+const Title = styled.h3`
+margin-top: 90px;
+font-family: 'Raleway', sans-serif;
+letter-spacing:5px;
+display:flex;
+justify-content:center;
+  font-size: 60px;
+  color: #c3b096;
+  font-weight:400;
+
+`;
+
 const FormWrapper = styled.div`
-  margin-top: 90px;
+
   width: 100%;
   display: flex;
   flex-direction: row;
@@ -134,6 +148,8 @@ const FormWrapper = styled.div`
   align-items: center;
   height: 100vh;
   background-color: black;
+
+
 
 `;
 
@@ -151,6 +167,11 @@ const StyledForm = styled.form`
   font-weight: 300;
   letter-spacing: 2px;
   vertical-align: middle !important;
+
+
+  @media only screen and (max-width: 700px) {
+    font-size: 15px !important;
+  }
 `;
 
 const Input = styled.input`
@@ -168,7 +189,7 @@ const Button = styled.button`
   color: white;
   font-size: 0.9em;
   background-color: #C3B091;
-  border-radius: 30px;
+  // border-radius: 30px;
   border: #C3B091;
   padding: 5px;
   width: 130px;

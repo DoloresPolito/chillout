@@ -1,7 +1,7 @@
 import React from "react";
 import Carousel from "../components/Carousel";
 
-const CarouselSection = () => {
+const Events = () => {
   return (
     <div id="gallery">
       <Carousel />
@@ -9,4 +9,4 @@ const CarouselSection = () => {
   );
 };
 
-export default CarouselSection;
+export default Events;

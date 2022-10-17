@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import picture from "../assets/casamientotoia-min/Foto-613-min.jpg";
+import picture from "../assets/casamientotoia-min/portada.jpeg";
 
 const Cover = () => {
   return (
@@ -13,5 +13,6 @@ const Cover = () => {
 const CoverWrapper = styled.section`
   heigth: 100vh;
   background: black;
+  margin-top:15px;
 `;
 export default Cover;

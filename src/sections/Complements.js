@@ -1,8 +1,9 @@
 import React from "react";
 import styled from "styled-components";
 import { Parallax } from "react-scroll-parallax";
-import picture from "../assets/casamientotoia-min/Foto-623-min.jpg";
-import pisos from "../assets/pisosmin/pisos1-min.jpeg";
+import picture from "../assets/delfi&facu-min/Baja-182-min.jpg";
+// import pisos from "../assets/pisosmin/pisos1-min.jpeg";
+import fogonero from "../assets/delfi&facu-min/Baja-269-min.jpg"
 
 const Complements = () => {
   return (
@@ -36,35 +37,23 @@ const Complements = () => {
         </Description>
       </Wrapper>
 
+
+
       <Wrapper>
+
         <Description>
           <Parallax speed={8}>
-            <Title>PISOS</Title>
+            <Title>FOGONEROS Y PISOS</Title>
           </Parallax>
           <Parallax speed={5}>
           <Text>
-            Ambienta el interior de las carpas complementando con pisos de
-            madera tipo deck o alfombrado.
+           Ambientá tu fiesta con nuestros fogoneros.
           </Text>
           </Parallax>
         </Description>
         <Images>
-          {/* <img
-            src={pisos}
-            style={{
-                width: "470px",
-                height: "560px",
-                marginLeft: "60px",
-                borderRadius: "5px",
-              }}
-          ></img> */}
-        </Images>
-      </Wrapper>
-
-      <Wrapper>
-        <Images>
           <img
-            src={picture}
+            src={fogonero}
             style={{
               width: "90%",
               height: "90%",
@@ -73,18 +62,6 @@ const Complements = () => {
             }}
           ></img>
         </Images>
-        <Description>
-          <Parallax speed={8}>
-            <Title>FOGONEROS</Title>
-          </Parallax>
-          <Parallax speed={5}>
-          <Text>
-            La iluminación es uno de los elementos más importantes para crear un
-            buen ambiente. Es por esto que ofrecemos guirnaldas de luces para
-            acompañar la carpa.
-          </Text>
-          </Parallax>
-        </Description>
       </Wrapper>
     </Section>
   );

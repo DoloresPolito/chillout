@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 
-
 const WthButton = () => {
   const [width, setWidth] = useState(window.innerWidth);
   useEffect(() => {
@@ -12,7 +11,11 @@ const WthButton = () => {
 
   return (
     <Button>
-      <i className="bi bi-whatsapp"></i>
+      <span style={{ paddingTop: "8px" }}>
+        {" "}
+        <i className="bi bi-whatsapp"></i>
+      </span>
+
       <Text>Escribinos por WhatsApp</Text>
     </Button>
   );
@@ -24,22 +27,41 @@ const Button = styled.button`
   background: #c3b091;
   border: 2px solid black;
   border-color: #c3b091;
-  border-radius: 30px;
   position: fixed;
-  bottom: 10px;
-  right: 10px;
+  bottom: 15px;
+  left: 15px;
   width: 20%;
   display: flex;
   justify-content: center;
   align-item: center;
   color: white;
-  padding-top: 5px;
   box-shadow: none;
+  width: 260px;
+
+  @media only screen and (max-width: 1120px) {
+    width: 25%;
+  }
+  @media only screen and (max-width: 860px) {
+    font-size: 15px;
+    width: 30%;
+  }
+  @media only screen and (max-width: 715px) {
+    font-size: 13px;
+    width: 35%;
+  }
+  @media only screen and (max-width: 550px) {
+    font-size: 12px;
+    width: 45%;
+  }
+  @media only screen and (max-width: 380px) {
+    font-size: 12px;
+    width: 50%;
+  }
 `;
 
 const Text = styled.p`
-  padding-left: 15px;
-
+  padding-top: 8px;
+  padding-left: 10px;
 `;
 
 export default WthButton;

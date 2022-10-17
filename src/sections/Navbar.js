@@ -17,7 +17,6 @@ const Navbar = () => {
   return (
     <NavbarSection>
       <NavbarContainer className={!isOpen && 'isClosed'}>
-        {/* <Logo src={} /> */}
         {width >= medium ? (
           <Tabs mode={'large'} />
         ) : (
@@ -33,6 +32,7 @@ const Navbar = () => {
 
 
 const NavbarSection = styled.section`
+
   z-index: 100;
   background: transparent;
   background: black;
@@ -62,6 +62,7 @@ const NavbarContainer = styled(Container)`
     align-items: center;
   }
   display: flex;
+
   justify-content: space-between;
 `
 
