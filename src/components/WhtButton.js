@@ -24,9 +24,9 @@ const WthButton = () => {
 const Button = styled.button`
   z-index: 100;
   background: transparent;
-  background: #c3b091;
+  background: #c8c1ba;
   border: 2px solid black;
-  border-color: #c3b091;
+  border-color: #c8c1ba;
   position: fixed;
   bottom: 15px;
   left: 15px;

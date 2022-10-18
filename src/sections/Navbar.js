@@ -35,10 +35,10 @@ const NavbarSection = styled.section`
 
   z-index: 100;
   background: transparent;
-  background: black;
+  background: #c8c1ba;
   // border-bottom: 2px solid white;
   @media only screen and (max-width: 700px) {
-    background: black;
+    background: #c8c1ba;
   }
   position: fixed;
   top: 0;

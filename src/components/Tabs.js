@@ -32,6 +32,9 @@ const LinkL = styled.a`
   color: #fcfcfc;
   cursor: pointer;
   text-decoration: none;
+  &:hover {
+    color: grey;
+  }
 
   @media only screen and (max-width: 700px) {
     font-size: 15px;
@@ -49,9 +52,10 @@ const TabsBox = styled.div`
   text-align: center;
 
   a {
-    padding: ${(props) => (props.mode === "large" ? "0 20px" : "20px 0")};
+    padding: ${(props) => (props.mode === "large" ? "0 15px" : "15px 0")};
     display: flex;
     align-items: center;
+    font-size: 13px;
     img {
       width: 35px;
       padding: 0 5px;

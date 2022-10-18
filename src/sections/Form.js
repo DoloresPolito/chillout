@@ -127,15 +127,32 @@ const Form = () => {
 };
 
 const Title = styled.h3`
-margin-top: 90px;
+
+margin-top: 120px;
 font-family: 'Raleway', sans-serif;
+font-size: 40px;
+color:#f6f4f3;
+font-weight:500;
 letter-spacing:5px;
 display:flex;
 justify-content:center;
-  font-size: 60px;
-  color: #c3b096;
-  font-weight:400;
 
+
+  @media only screen and (max-width: 700px) {
+    font-size: 50px !important;
+
+
+  }
+  @media only screen and (max-width: 600px) {
+    font-size: 40px !important;
+
+
+  }
+  @media only screen and (max-width: 470px) {
+    font-size: 30px !important;
+
+
+  }
 `;
 
 const FormWrapper = styled.div`
@@ -146,8 +163,7 @@ const FormWrapper = styled.div`
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  height: 100vh;
-  background-color: black;
+  background-color: #d6d0cb;
 
 
 
@@ -155,7 +171,7 @@ const FormWrapper = styled.div`
 
 const StyledForm = styled.form`
   flex: 100%;
-  height: 100vh;
+
   list-style: none;
   text-decoration: none !important;
   color: grey !important;
@@ -179,7 +195,7 @@ const Input = styled.input`
   width: 90%;
   height: 8px;
   margin: 0.5rem;
-  background-color: black;
+  background-color: #c8c1ba;
   border: none;
   border-bottom: 1px solid #fff;
   outline: none;
@@ -188,7 +204,7 @@ const Input = styled.input`
 const Button = styled.button`
   color: white;
   font-size: 0.9em;
-  background-color: #C3B091;
+  background-color: #c8c1ba;
   // border-radius: 30px;
   border: #C3B091;
   padding: 5px;

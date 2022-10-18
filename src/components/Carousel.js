@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import Carousel from "react-elastic-carousel";
 import styled from "styled-components";
 import Card from "./Card";
+import { Parallax } from "react-scroll-parallax";
 import picture1 from "../assets/casamientotoia-min/Foto-1383-min.jpg";
 import picture2 from "../assets/casamientotoia-min/Foto-716-min.jpg";
 import picture3 from "../assets/casamientotoia-min/Foto-615-min.jpg";
@@ -28,7 +29,10 @@ const CarouselSection = () => {
 
   return (
     <Container>
+       <Parallax speed={6}>
       <EventTitle>EVENTOS</EventTitle>
+      </Parallax>
+      <Parallax speed={12}>
       <Carousel
         enableAutoPlay
         autoPlaySpeed={5500}
@@ -37,82 +41,167 @@ const CarouselSection = () => {
         itemsToScroll={1}
       >
         <Card mode="black">
-          <img src={picture1} style={{ height: "100%", width: "100%" }} />
+          <img
+            src={picture1}
+            style={{ height: "100%", width: "100%" }}
+            alt="casamiento"
+          />
         </Card>
 
         <Card mode="black">
-          <img src={picture5} style={{ height: "100%", width: "100%" }} />
+          <img
+            src={picture5}
+            style={{ height: "100%", width: "100%" }}
+            alt="casamiento"
+          />
         </Card>
         <Card mode="black">
-          <img src={picture6} style={{ height: "100%", width: "100%" }} />
+          <img
+            src={picture6}
+            style={{ height: "100%", width: "100%" }}
+            alt="casamiento"
+          />
         </Card>
         <Card mode="black">
-          <img src={picture7} style={{ height: "100%", width: "100%" }} />
+          <img
+            src={picture7}
+            style={{ height: "100%", width: "100%" }}
+            alt="casamiento"
+          />
         </Card>
         <Card mode="black">
-          <img src={picture8} style={{ height: "100%", width: "100%" }} />
+          <img
+            src={picture8}
+            style={{ height: "100%", width: "100%" }}
+            alt="casamiento"
+          />
         </Card>
 
         <Card mode="black">
-          <img src={picture9} style={{ height: "100%", width: "100%" }} />
+          <img
+            src={picture9}
+            style={{ height: "100%", width: "100%" }}
+            alt="casamiento"
+          />
         </Card>
         <Card mode="black">
-          <img src={picture10} style={{ height: "100%", width: "100%" }} />
+          <img
+            src={picture10}
+            style={{ height: "100%", width: "100%" }}
+            alt="casamiento"
+          />
         </Card>
         <Card mode="black">
-          <img src={picture11} style={{ height: "100%", width: "100%" }} />
+          <img
+            src={picture11}
+            style={{ height: "100%", width: "100%" }}
+            alt="casamiento"
+          />
         </Card>
         <Card mode="black">
-          <img src={picture12} style={{ height: "100%", width: "100%" }} />
+          <img
+            src={picture12}
+            style={{ height: "100%", width: "100%" }}
+            alt="casamiento"
+          />
         </Card>
 
         <Card mode="black">
-          <img src={picture13} style={{ height: "100%", width: "100%" }} />
+          <img
+            src={picture13}
+            style={{ height: "100%", width: "100%" }}
+            alt="casamiento"
+          />
         </Card>
         <Card mode="black">
-          <img src={picture14} style={{ height: "100%", width: "100%" }} />
+          <img
+            src={picture14}
+            style={{ height: "100%", width: "100%" }}
+            alt="casamiento"
+          />
         </Card>
         <Card mode="black">
-          <img src={picture15} style={{ height: "100%", width: "100%" }} />
+          <img
+            src={picture15}
+            style={{ height: "100%", width: "100%" }}
+            alt="casamiento"
+          />
         </Card>
         <Card mode="black">
-          <img src={picture16} style={{ height: "100%", width: "100%" }} />
+          <img
+            src={picture16}
+            style={{ height: "100%", width: "100%" }}
+            alt="casamiento"
+          />
         </Card>
         <Card mode="black">
-          <img src={picture2} style={{ height: "100%", width: "100%" }} />
+          <img
+            src={picture2}
+            style={{ height: "100%", width: "100%" }}
+            alt="casamiento"
+          />
         </Card>
         <Card mode="black">
-          <img src={picture3} style={{ height: "100%", width: "100%" }} />
+          <img
+            src={picture3}
+            style={{ height: "100%", width: "100%" }}
+            alt="casamiento"
+          />
         </Card>
         <Card mode="black">
-          <img src={picture4} style={{ height: "100%", width: "100%" }} />
+          <img
+            src={picture4}
+            style={{ height: "100%", width: "100%" }}
+            alt="casamiento"
+          />
+        </Card>
+        <Card mode="black">
+          <img
+            src={picture11}
+            style={{ height: "100%", width: "100%" }}
+            alt="casamiento"
+          />
         </Card>
       </Carousel>
+      </Parallax>
     </Container>
   );
 };
 
 const EventTitle = styled.h3`
-font-family: 'Raleway', sans-serif;
-letter-spacing:5px;
-display:flex;
-justify-content:center;
-  font-size: 60px;
-  color: #c3b096;
-  font-weight:400;
-  padding-top:50px;
+  font-family: "Raleway", sans-serif;
+  font-size: 40px;
+  color: #c8c3ba;
+  font-weight: 500;
+  letter-spacing: 5px;
+
+  display: flex;
+  justify-content: center;
+
+  padding-top: 50px;
+
+  @media only screen and (max-width: 700px) {
+    font-size: 50px !important;
+  }
+  @media only screen and (max-width: 600px) {
+    font-size: 40px !important;
+  }
+  @media only screen and (max-width: 470px) {
+    font-size: 30px !important;
+  }
 `;
 
 const Container = styled.div`
   /* square buttons */
   .rec.rec-arrow {
-    border-radius: 0;
-    background-color: black;
+
+    border-radius: 50px;
+    background-color: #f6f4f3;
   }
   /* round buttons on hover */
   .rec.rec-arrow:hover {
     border-radius: 50%;
-    background-color: black;
+    background-color:  #d6d0cb;
   }
 
   /* hide disabled buttons */
@@ -135,9 +224,6 @@ const Container = styled.div`
     align-items: flex-start;
     flex-direction: column;
     justify-content: space-between;
-  }
-
-  @media only screen and (max-width: 850px) {
   }
 `;
 

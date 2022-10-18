@@ -12,9 +12,8 @@ const Card = ({ mode, custom, children, ...rest }) => {
 };
 
 const CardContainer = styled.div`
-  border: ${(props) =>
-    props.mode === "black" ? "solid 1px #151515" : "solid 1px white"};
-  background:"black"
+  border: #f6f4f3;
+  background:"#f6f4f3"
   border-radius: 8px;
   height: 400px;
   width: 598px;
@@ -27,12 +26,6 @@ const CardContainer = styled.div`
     margin: 0;
     padding: 15px;
     height: auto;
-  }
-
-  @media only screen and (max-width: 500px) {
-    height: 220px !important;
-    width: 498px !important;
-    background-color: red;
   }
   color: white;
   z-index: 1;

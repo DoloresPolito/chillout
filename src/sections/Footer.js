@@ -20,27 +20,39 @@ const Footer = () => {
 };
 
 const Icon = styled.a`
-  color: white;
+  color: grey;
   font-size: 1.2em;
   padding-left: 20px;
+  cursor:pointer;
+  &:hover {
+    color: white;
+  }
+
 `;
 
 const Cpyrigth = styled.p`
   font-size: 1em;
   text-align: center;
-  color: white;
+  color: grey;
   padding-right:90px
+
 
 `;
 
 
 
 const InfoWrapper = styled.section`
+font-weight: 300;
   padding-top: 15em;
   padding-bottom: 3em;
-  background: black;
+  background: #d6d0cb;
   display: flex;
   justify-content: center;
+  @media only screen and (max-width: 500px) {
+    font-size: 10px !important;
+
+
+  }
 `;
 
 export default Footer;
