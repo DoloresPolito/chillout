@@ -31,26 +31,28 @@ const CoverWrapper = styled.section`
 const Image = styled.img`
   height: 600px;
   max-width: 100%;
-  @media only screen and (max-width: 1200px) {
-    height: 500px;
-    max-width: 100%;
-  }
-  @media only screen and (max-width: 1100px) {
-    height: 450px;
-    max-width: 100%;
-  }
-  @media only screen and (max-width: 950px) {
-    max-width: 100%;
-    height: 400px;
-  }
-  @media only screen and (max-width: 500px) {
-    max-width: 100%;
-    height: 350px;
-  }
-  @media only screen and (min-width: 499px) {
-    max-width: 100%;
-    height: 300px;
-  }
+  object-fit: cover;
+
+  // @media only screen and (max-width: 1200px) {
+  //   height: 500px;
+  //   max-width: 100%;
+  // }
+  // @media only screen and (max-width: 1100px) {
+  //   height: 450px;
+  //   max-width: 100%;
+  // }
+  // @media only screen and (max-width: 950px) {
+  //   max-width: 100%;
+  //   height: 400px;
+  // }
+  // @media only screen and (max-width: 500px) {
+  //   max-width: 100%;
+  //   height: 350px;
+  // }
+  // @media only screen and (min-width: 499px) {
+  //   max-width: 100%;
+  //   height: 300px;
+  // }
 `;
 
 export default Cover;

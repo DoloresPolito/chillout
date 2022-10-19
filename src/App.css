@@ -66,6 +66,8 @@ input:focus {
   position: relative;
   margin-bottom: 12px;
   cursor: pointer;
+  width: 360px !important;
+ justify-content:start;
   font-size: 15px;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -128,7 +130,31 @@ input:focus {
   transform: rotate(45deg);
 }
 
+.container, .container-fluid, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+  margin-left: 0 !important;
+  padding-right: 0 !important;
+  padding-left: 0 !important;
+
+
+}
+
 #gallery{
   background-color: #f6f4f3;
   height: 100vh;
+}
+
+
+.whatsappLink.mobile{
+  display: none;
+}
+
+@media only screen and (max-width: 1024px) {
+
+
+  .whatsappLink.desktop {
+    display: none;
+  }
+  .whatsappLink.mobile{
+    display: inline;
+  }
 }

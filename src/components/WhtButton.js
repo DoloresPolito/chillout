@@ -7,17 +7,35 @@ const WthButton = () => {
     window.addEventListener("resize", () => setWidth(window.innerWidth));
   }, []);
 
-  const medium = 700;
+  const medium = 1024;
 
   return (
-    <Button>
-      <span style={{ paddingTop: "8px" }}>
-        {" "}
-        <i className="bi bi-whatsapp"></i>
-      </span>
+    <>
+      {width >= medium ? (
+     <a class="whatsappLink desktop" href="http://web.whatsapp.com/send?text=Tu mensaje&phone=+543446584076&abid=+543446584076" target="_blank">
+        <Button>
+          <span style={{ paddingTop: "8px" }}>
+            {" "}
+            <i className="bi bi-whatsapp"></i>
+          </span>
 
-      <Text>Escribinos por WhatsApp</Text>
-    </Button>
+          <Text>Escribinos por WhatsApp</Text>
+        </Button>
+        </a>
+      ) : (
+ 
+          <a class="whatsappLink mobile" href="whatsapp://send?text=Tu mensaje&phone=+543446584076&abid=+543446584076" target="_blank">
+        <Button>
+          <span style={{ paddingTop: "8px" }}>
+            {" "}
+            <i className="bi bi-whatsapp"></i>
+          </span>
+
+          <Text>Escribinos por WhatsApp</Text>
+        </Button>
+        </a>
+      )}
+    </>
   );
 };
 
@@ -37,6 +55,7 @@ const Button = styled.button`
   color: white;
   box-shadow: none;
   width: 260px;
+  font-weight: 500;
 
   @media only screen and (max-width: 1120px) {
     width: 25%;

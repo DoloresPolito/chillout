@@ -36,7 +36,7 @@ const NavbarSection = styled.section`
   z-index: 100;
   background: transparent;
   background: #c8c1ba;
-  // border-bottom: 2px solid white;
+  border-bottom: 1px solid white;
   @media only screen and (max-width: 700px) {
     background: #c8c1ba;
   }
@@ -47,7 +47,7 @@ const NavbarSection = styled.section`
   .hamburger-react {
     position: relative;
     z-index: 3;
-    color: white;
+    color: grey;
   }
 
 

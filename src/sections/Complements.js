@@ -10,6 +10,11 @@ const Complements = () => {
       {" "}
       <Parallax speed={7}>
         <SectionTitle>COMPLEMENTOS</SectionTitle>
+
+        <SubTitle>
+          Elegí las terminaciones que más vayan con tu evento y sumale los
+          complementos necesarios para lograr el confort ideal.
+        </SubTitle>
       </Parallax>
       <Section id="complements">
         <Wrapper>
@@ -73,7 +78,6 @@ const SectionTitle = styled.h3`
   color: white;
   font-weight: 500;
   margin-top: 40px;
-  margin-bottom: 40px;
   display: flex;
   justify-content: center;
 
@@ -85,6 +89,33 @@ const SectionTitle = styled.h3`
   }
   @media only screen and (max-width: 470px) {
     font-size: 30px !important;
+  }
+`;
+const SubTitle = styled.h3`
+  padding-top: 30px;
+  font-family: "Raleway", sans-serif;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  font-size: 18px;
+  color: white;
+  font-weight: 300;
+  width: 600px;
+  margin: 0 auto;
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: center;
+
+  @media only screen and (max-width: 700px) {
+    font-size: 15px !important;
+    width: 500px;
+  }
+  @media only screen and (max-width: 600px) {
+    font-size: 15px !important;
+    width: 400px;
+  }
+  @media only screen and (max-width: 470px) {
+    font-size: 12px !important;
+    width: 300px;
   }
 `;
 
@@ -153,12 +184,12 @@ const Text = styled.p`
 
   @media only screen and (max-width: 630px) {
     font-size: 11px;
-    width:400px
+    width: 400px;
   }
 
   @media only screen and (max-width: 350px) {
     font-size: 10px;
-    width:300px
+    width: 300px;
   }
 `;
 

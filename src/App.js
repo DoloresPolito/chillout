@@ -6,6 +6,7 @@ import Complements from "./sections/Complements";
 import ComplementsCards from "./sections/ComplementsCards";
 import CarouselSection from "./sections/Events";
 import WhtButton from './components/WhtButton'
+import BigCarousel from './components/BigCarousel'
 
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 
@@ -16,7 +17,9 @@ function App() {
     <div>
       <Navbar />
       <WhtButton/>
-      <Cover />
+      <BigCarousel/>
+
+      {/* <Cover /> */}
       <Complements/>
       <CarouselSection />
       <Form />

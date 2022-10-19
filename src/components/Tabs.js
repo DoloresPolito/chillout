@@ -25,11 +25,11 @@ const Tabs = ({ mode }) => {
 };
 
 const LinkL = styled.a`
-  font-weight: 400;
+  font-weight: 500;
   font-size: 13px;
   letter-spacing: 2px;
   line-height: 28px;
-  color: #fcfcfc;
+  color: grey;
   cursor: pointer;
   text-decoration: none;
   &:hover {

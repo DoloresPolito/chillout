@@ -1,19 +1,48 @@
 import React from "react";
-import { Carousel } from "react-responsive-carousel";
+import styled from "styled-components";
+import Carousel from "react-elastic-carousel";
+import picture6 from "../assets/portada/Baja-182.jpeg";
+import picture7 from "../assets/portada/Foto-613-min.jpeg";
+import picture4 from "../assets/portada/Foto-611-min.jpeg";
+import picture5 from "../assets/portada/Foto-610-min.jpeg";
 
 export default () => (
-  <Carousel autoPlay>
-    <div>
-      <img alt="" src="https://unsplash.it/400/300/?image=514" />
-      <p className="legend">Legend 1</p>
-    </div>
-    <div>
-      <img alt="" src="https://unsplash.it/400/300/?image=512" />
-      <p className="legend">Legend 2</p>
-    </div>
-    <div>
-      <img alt="" src="https://unsplash.it/400/300/?image=511" />
-      <p className="legend">Legend 3</p>
-    </div>
-  </Carousel>
+  <Container>
+    <Carousel enableAutoPlay autoPlaySpeed={5500}>
+      <img
+        src={picture4}
+        style={{ height: "800px", width: "100%", objectFit: "cover"}}
+        alt="casamiento"
+      />
+
+      <img
+        src={picture5}
+        style={{ height: "800px", maxWidth: "100%", objectFit: "cover" }}
+        alt="casamiento"
+      />
+
+      <img
+        src={picture6}
+        style={{ height: "800px", maxWidth: "100%", objectFit: "cover" }}
+        alt="casamiento"
+      />
+      <img
+        src={picture7}
+        style={{ height: "800px", maxWidth: "100%", objectFit: "cover" }}
+        alt="casamiento"
+      />
+
+    </Carousel>
+  </Container>
 );
+
+const Container = styled.div`
+
+  .rec-arrow {
+    display: none;
+  }
+
+  .rec.rec-pagination {
+    display: none;
+  }
+`;

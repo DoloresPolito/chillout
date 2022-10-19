@@ -7,21 +7,26 @@ import "../App.css";
 const Form = () => {
   const path = window.location.pathname;
 
-  const frmContact = { userName: ``, userEmail: ``, date:``, place:``, message: `` };
+  const frmContact = {
+    userName: ``,
+    userEmail: ``,
+    date: ``,
+    place: ``,
+    message: ``,
+  };
   const [contact, setContact] = useState("");
   const [showMessage, setShowMessage] = useState(false);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
     setContact({ ...contact, [name]: value });
-
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    console.log("contact", contact)
-    console.log("frmContact", frmContact)
+    console.log("contact", contact);
+    console.log("frmContact", frmContact);
 
     emailjs
       .send(`service_lsilwkf`, `template_zefnjzw`, contact, `F-wmz4d9VI_6zEds5`)
@@ -38,125 +43,114 @@ const Form = () => {
   };
   return (
     <>
-       <Parallax speed={-8}>
-       <Title>COTIZÁ TU EVENTO</Title>
-      <FormWrapper id="form">
+      <Parallax speed={-8}>
+        <Title>COTIZÁ TU EVENTO</Title>
+        <FormWrapper id="form">
+          <StyledForm onSubmit={handleSubmit}>
+            <Input
+              placeholder="NOMBRE Y APELLIDO"
+              type="text"
+              required
+              value={contact.userName}
+              name="userName"
+              onChange={handleChange}
+            />
 
-        <StyledForm onSubmit={handleSubmit}>
-          <Input
-            placeholder="NOMBRE Y APELLIDO"
-            type="text"
-            required
-            value={contact.userName}
-            name="userName"
-            onChange={handleChange}
-          />
+            <Input
+              placeholder="EMAIL"
+              value={contact.userEmail}
+              onChange={handleChange}
+              name="userEmail"
+              type="text"
+              required
+            />
 
-          <Input
-            placeholder="EMAIL"
-            value={contact.userEmail}
-            onChange={handleChange}
-            name="userEmail"
-            type="text"
-            required
-          />
+            <Input
+              placeholder="LUGAR"
+              value={contact.place}
+              onChange={handleChange}
+              name="place"
+              type="text"
+              required
+            />
 
-          <Input
-            placeholder="LUGAR"
-            value={contact.place}
-            onChange={handleChange}
-            name="place"
-            type="text"
-            required
-          />
+            <Input
+              placeholder="FECHA"
+              type="text"
+              required
+              value={contact.date}
+              name="date"
+              onChange={handleChange}
+            />
 
-          <Input
-            placeholder="FECHA"
-            type="text"
-            required
-            value={contact.date}
-            name="date"
-            onChange={handleChange}
-          />
+            <Input
+              name="message"
+              placeholder="MENSAJE"
+              onChange={handleChange}
+              type="text"
+              required
+              value={contact.message}
+            />
 
-          <Input
-            name="message"
-            placeholder="MENSAJE"
-            onChange={handleChange}
-            type="text"
-            required
-            value={contact.message}
-          />
+            <br />
+            <br />
+            <h4 className="adicionales">ADICIONALES</h4>
 
-          <br />
-          <br />
-          <h4 className="adicionales">ADICIONALES</h4>
+            <label className="container">
+              <p> PISOS DECK</p>
 
-          <label className="container">
-            PISOS
-            <input type="checkbox" />
-            <span className="checkmark"></span>
-          </label>
+              <input type="checkbox" />
+              <span className="checkmark"></span>
+            </label>
 
-          <label className="container">
-            FOGONEROS
-            <input type="checkbox" />
-            <span className="checkmark"></span>
-          </label>
+            <label className="container">
+              FOGONEROS
+              <input type="checkbox" />
+              <span className="checkmark"></span>
+            </label>
 
-          <label className="container">
-            GUIRNALDA DE LUCES
-            <input type="checkbox" />
-            <span className="checkmark"></span>
-          </label>
+            <label className="container">
+             ILUMINACIÓN
+              <input type="checkbox" />
+              <span className="checkmark"></span>
+            </label>
 
-          <label className="container">
-            PAGINA WEB
-            <input type="checkbox" />
-            <span className="checkmark"></span>
-          </label>
+            <label className="container">
+              PAGINA WEB
+              <input type="checkbox" />
+              <span className="checkmark"></span>
+            </label>
 
-     
-
-          <Button type="submit">ENVIAR</Button>
-        </StyledForm>
-      </FormWrapper>
+            <Button type="submit">ENVIAR</Button>
+          </StyledForm>
+        </FormWrapper>
       </Parallax>
     </>
   );
 };
 
 const Title = styled.h3`
-
-margin-top: 120px;
-font-family: 'Raleway', sans-serif;
-font-size: 40px;
-color:#f6f4f3;
-font-weight:500;
-letter-spacing:5px;
-display:flex;
-justify-content:center;
-
+  margin-top: 120px;
+  font-family: "Raleway", sans-serif;
+  font-size: 40px;
+  color: #f6f4f3;
+  font-weight: 500;
+  letter-spacing: 5px;
+  display: flex;
+  justify-content: center;
 
   @media only screen and (max-width: 700px) {
     font-size: 50px !important;
-
-
   }
   @media only screen and (max-width: 600px) {
     font-size: 40px !important;
-
-
   }
   @media only screen and (max-width: 470px) {
     font-size: 30px !important;
-
-
   }
 `;
 
 const FormWrapper = styled.div`
-
   width: 100%;
   display: flex;
   flex-direction: row;
@@ -164,9 +158,6 @@ const FormWrapper = styled.div`
   justify-content: center;
   align-items: center;
   background-color: #d6d0cb;
-
-
-
 `;
 
 const StyledForm = styled.form`
@@ -183,7 +174,6 @@ const StyledForm = styled.form`
   font-weight: 300;
   letter-spacing: 2px;
   vertical-align: middle !important;
-
 
   @media only screen and (max-width: 700px) {
     font-size: 15px !important;
@@ -205,11 +195,11 @@ const Button = styled.button`
   color: white;
   font-size: 0.9em;
   background-color: #c8c1ba;
-  // border-radius: 30px;
-  border: #C3B091;
+  border: #c3b091;
   padding: 5px;
   width: 130px;
-  margin-top:30px;
+  margin-top: 30px;
+  font-weight: 600;
 `;
 
 export default Form;
