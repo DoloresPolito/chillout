@@ -25,7 +25,8 @@ const CarouselSection = () => {
   useEffect(() => {
     window.addEventListener("resize", () => setWidth(window.innerWidth));
   }, []);
-  const medium = 850;
+
+  const medium = 900;
 
   return (
     <Container>
@@ -36,7 +37,7 @@ const CarouselSection = () => {
       <Carousel
         enableAutoPlay
         autoPlaySpeed={5500}
-        itemPadding={[50, 50]}
+        // itemPadding={[0, 50]}
         itemsToShow={width >= medium ? 2 : 1}
         itemsToScroll={1}
       >
@@ -169,7 +170,8 @@ const CarouselSection = () => {
 };
 
 const EventTitle = styled.h3`
-  font-family: "Raleway", sans-serif;
+font-family: "GTWalsheimPro";
+font-style: normal;
   font-size: 40px;
   color: #c8c3ba;
   font-weight: 500;
@@ -195,13 +197,15 @@ const Container = styled.div`
   /* square buttons */
   .rec.rec-arrow {
 
-    border-radius: 50px;
-    background-color: #f6f4f3;
+    border-radius: none;
+    background-color: #d6d0cb;
+    color:white;
+    margin:10px;
   }
   /* round buttons on hover */
   .rec.rec-arrow:hover {
-    border-radius: 50%;
-    background-color:  #d6d0cb;
+    border-radius: none;
+    color:grey
   }
 
   /* hide disabled buttons */

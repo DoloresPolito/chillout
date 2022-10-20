@@ -17,8 +17,40 @@ const CardContainer = styled.div`
   border-radius: 8px;
   height: 400px;
   width: 598px;
-
   margin-top: 50px;
+
+
+  @media only screen and (max-width: 1200px) {
+    width: 480px;
+    heigth: 450px;
+  }
+
+  @media only screen and (max-width: 1130px) {
+    width: 430px;
+    heigth: 420px;
+  }
+
+  @media only screen and (max-width: 1000px) {
+    width: 400px;
+    heigth: 380px;
+  }
+
+  @media only screen and (max-width: 900px) {
+    width: 550px;
+    heigth: 380px;
+  }
+
+  @media only screen and (max-width: 600px) {
+    width: 450px;
+    heigth: 280px;
+  }
+
+  @media only screen and (max-width: 500px) {
+    width: 450px;
+    heigth: 230px;
+  }
+
+
 
   ${(props) =>
     props.custom === true &&

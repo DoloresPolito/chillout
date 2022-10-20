@@ -110,7 +110,7 @@ const Form = () => {
             </label>
 
             <label className="container">
-             ILUMINACIÓN
+              ILUMINACIÓN
               <input type="checkbox" />
               <span className="checkmark"></span>
             </label>
@@ -131,7 +131,8 @@ const Form = () => {
 
 const Title = styled.h3`
   margin-top: 120px;
-  font-family: "Raleway", sans-serif;
+  font-family: "GTWalsheimPro";
+  font-style: normal;
   font-size: 40px;
   color: #f6f4f3;
   font-weight: 500;
@@ -166,7 +167,7 @@ const StyledForm = styled.form`
   list-style: none;
   text-decoration: none !important;
   color: grey !important;
-  font-size: 20px !important;
+  font-size: 15px !important;
   text-align: center;
   align-items: center;
   padding-top: 140px;
@@ -175,8 +176,16 @@ const StyledForm = styled.form`
   letter-spacing: 2px;
   vertical-align: middle !important;
 
-  @media only screen and (max-width: 700px) {
-    font-size: 15px !important;
+  @media only screen and (max-width: 1200px) {
+    font-size: 13px;
+  }
+
+  @media only screen and (max-width: 630px) {
+    font-size: 11px;
+  }
+
+  @media only screen and (max-width: 350px) {
+    font-size: 10px;
   }
 `;
 
@@ -189,7 +198,12 @@ const Input = styled.input`
   border: none;
   border-bottom: 1px solid #fff;
   outline: none;
-  color: grey;
+  color: red;
+  font-size: 15px;
+
+  @media only screen and (max-width: 1200px) {
+    font-size: 13px;
+  }
 `;
 const Button = styled.button`
   color: white;

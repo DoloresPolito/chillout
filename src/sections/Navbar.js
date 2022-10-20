@@ -62,7 +62,6 @@ const NavbarContainer = styled(Container)`
     align-items: center;
   }
   display: flex;
-
   justify-content: space-between;
 `
 

@@ -58,23 +58,24 @@ const Button = styled.button`
   font-weight: 500;
 
   @media only screen and (max-width: 1120px) {
+    font-size: 14px;
     width: 25%;
   }
   @media only screen and (max-width: 860px) {
-    font-size: 15px;
+    font-size: 14px;
     width: 30%;
   }
   @media only screen and (max-width: 715px) {
-    font-size: 13px;
+    font-size: 12px;
     width: 35%;
   }
   @media only screen and (max-width: 550px) {
     font-size: 12px;
-    width: 45%;
+    width: 50%;
   }
   @media only screen and (max-width: 380px) {
     font-size: 12px;
-    width: 50%;
+    width: 60%;
   }
 `;
 

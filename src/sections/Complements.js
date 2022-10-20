@@ -1,23 +1,20 @@
 import React, { useRef } from "react";
 import useObserver from "../hooks/useObserver";
 import styled from "styled-components";
-import { useTransition, useSpring, animated as a } from "react-spring";
+import {useSpring, animated as a } from "react-spring";
 import { Parallax } from "react-scroll-parallax";
 import picture from "../assets/delfi&facu-min/Baja-182-min.jpg";
 import fogonero from "../assets/delfi&facu-min/Baja-269-min.jpg";
-
-
-
+import {H6, BodyL} from '../styles/texts'
 
 const Complements = () => {
   const triggerRefAbout = useRef();
-
   const dataRef = useObserver(triggerRefAbout, {
-    freezeOnceVisible: true,
+    freezeOnceVisible: false,
   });
 
   const pStyle = useSpring({
-    config: { duration: 2000 },
+    config: { duration: 1500 },
     from: { opacity: 0, transform: "scale(0.1)" },
     to: {
       opacity: dataRef?.isIntersecting ? 1 : 0,
@@ -25,16 +22,31 @@ const Complements = () => {
     },
   });
 
+
+  const triggerRefAbout1 = useRef();
+  const dataRef1 = useObserver(triggerRefAbout1, {
+    freezeOnceVisible: false,
+  });
+
+  const p1Style = useSpring({
+    config: { duration: 1500 },
+    from: { opacity: 0, transform: "scale(0.1)" },
+    to: {
+      opacity: dataRef1?.isIntersecting ? 1 : 0,
+      transform: "scale(1)",
+    },
+  });
   return (
     <>
-      {" "}
+          <Parallax speed={7}>
+          <SectionTitle>COMPLEMENTOS</SectionTitle>
+          </Parallax>
  
-        <SectionTitle>COMPLEMENTOS</SectionTitle>
-   <div ref={triggerRefAbout} />
-        <SubTitle>
-          Elegí las terminaciones que más vayan con tu evento y sumale los
-          complementos necesarios para lograr el confort ideal.
-        </SubTitle>
+
+      {/* <SubTitle>
+        Elegí las terminaciones que más vayan con tu evento y sumale los
+        complementos necesarios para lograr el confort ideal.
+      </SubTitle> */}
 
       <Section id="complements">
         <Wrapper>
@@ -50,33 +62,39 @@ const Complements = () => {
               ></img>
             </Images>
           </Parallax>
-          <Description>
-            <Parallax speed={6}>
-              <Title>ILUMINACIÓN</Title>
-            </Parallax>
-            <Parallax speed={8}>
-           
 
-              <a.div style={pStyle}>
-                <Text>
+          <div ref={triggerRefAbout} />
+          <a.div style={pStyle}>
+            <Description>
+              <Parallax speed={6}>
+                <H6>ILUMINACIÓN</H6>
+              </Parallax>
+              <Parallax speed={8}>
+                <BodyL>
                   La iluminación es uno de los elementos más importantes para
                   crear un buen ambiente. Es por esto que ofrecemos guirnaldas
                   de luces para acompañar la carpa.
-                </Text>
-              </a.div>
-            </Parallax>
-          </Description>
+                </BodyL>
+              </Parallax>
+            </Description>
+          </a.div>
         </Wrapper>
 
         <Wrapper>
+        <div ref={triggerRefAbout1} />
+          <a.div style={p1Style}>
           <Description>
             <Parallax speed={6}>
-              <Title>FOGONEROS Y PISOS</Title>
+              <H6>FOGONEROS Y PISOS</H6>
             </Parallax>
             <Parallax speed={8}>
-              <Text>Ambientá tu fiesta con nuestros fogoneros.</Text>
+              <BodyL>
+
+                
+                Ambientá tu fiesta con nuestros fogoneros para lograr el confort ideal. Dale a tu fiesta la calidez que necesita.</BodyL>
             </Parallax>
           </Description>
+          </a.div>
           <Parallax speed={7}>
             <Images>
               <img
@@ -96,12 +114,15 @@ const Complements = () => {
 };
 
 const SectionTitle = styled.h3`
+font-family: "GTWalsheimPro";
+font-style: normal;
   padding-top: 80px;
-  font-family: "Raleway", sans-serif;
+
   font-size: 40px;
   color: white;
   font-weight: 500;
   margin-top: 40px;
+  margin-bottom: 40px;
   display: flex;
   justify-content: center;
 
@@ -115,33 +136,7 @@ const SectionTitle = styled.h3`
     font-size: 30px !important;
   }
 `;
-const SubTitle = styled.h3`
-  padding-top: 30px;
-  font-family: "Raleway", sans-serif;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  font-size: 18px;
-  color: white;
-  font-weight: 300;
-  width: 600px;
-  margin: 0 auto;
-  margin-bottom: 30px;
-  display: flex;
-  justify-content: center;
 
-  @media only screen and (max-width: 700px) {
-    font-size: 15px !important;
-    width: 500px;
-  }
-  @media only screen and (max-width: 600px) {
-    font-size: 15px !important;
-    width: 400px;
-  }
-  @media only screen and (max-width: 470px) {
-    font-size: 12px !important;
-    width: 300px;
-  }
-`;
 
 const Section = styled.div`
   background-color: #d6d2ce;
@@ -166,7 +161,9 @@ const Wrapper = styled.div`
 const Images = styled.div`
   width: 600px;
   heigth: 600px;
-  margin-left: 50px;
+  display:flex;
+  justify-content:center;
+
   @media only screen and (max-width: 1200px) {
     width: 550px;
     heigth: 550px;
@@ -178,60 +175,44 @@ const Images = styled.div`
   }
 
   @media only screen and (max-width: 420px) {
-    width: 400px;
-    heigth: 400px;
+    width: 320px;
+    heigth: 320px;
   }
 
   @media only screen and (max-width: 350px) {
-    width: 350px;
-    heigth: 350px;
+    width: 320px;
+    heigth: 320px;
   }
 `;
 
 const Description = styled.div`
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+width:500px;
+padding: 10px 0px;
+
+@media only screen and (max-width: 1200px) {
   width: 500px;
   heigth: 500px;
-  color: white;
+}
+
+@media only screen and (max-width: 630px) {
+  width: 440px;
+  heigth: 400px;
+}
+
+@media only screen and (max-width: 420px) {
+  width: 300px;
+  heigth: 300px;
+}
+
+@media only screen and (max-width: 350px) {
+  width: 250px;
+  heigth: 250px;
+}
 `;
 
-const Text = styled.p`
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  color: grey;
-  font-size: 15px;
-  font-weight: 200;
-  margin: 0 auto;
-  margin-top: 30px;
-  @media only screen and (max-width: 1200px) {
-    font-size: 13px;
-  }
 
-  @media only screen and (max-width: 630px) {
-    font-size: 11px;
-    width: 400px;
-  }
-
-  @media only screen and (max-width: 350px) {
-    font-size: 10px;
-    width: 300px;
-  }
-`;
-
-const Title = styled.h3`
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  color: grey;
-  font-size: 30px;
-  display: flex;
-  justify-content: center;
-  font-weight: 400;
-  @media only screen and (max-width: 1200px) {
-    font-size: 23px;
-  }
-
-  @media only screen and (max-width: 630px) {
-    font-size: 18px;
-  }
-`;
 
 export default Complements;

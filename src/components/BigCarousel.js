@@ -1,43 +1,33 @@
 import React from "react";
 import styled from "styled-components";
 import Carousel from "react-elastic-carousel";
-import picture6 from "../assets/portada/Baja-182.jpeg";
-import picture7 from "../assets/portada/Foto-613-min.jpeg";
-import picture4 from "../assets/portada/Foto-611-min.jpeg";
-import picture5 from "../assets/portada/Foto-610-min.jpeg";
+import picture3 from "../assets/portada/Baja-182.jpeg";
+import picture4 from "../assets/portada/Foto-613-min.jpeg";
+import picture1 from "../assets/portada/Foto-611-min.jpeg";
+import picture2 from "../assets/portada/Foto-610-min.jpeg";
 
 export default () => (
   <Container>
     <Carousel enableAutoPlay autoPlaySpeed={5500}>
-      <img
-        src={picture4}
-        style={{ height: "800px", width: "100%", objectFit: "cover"}}
-        alt="casamiento"
-      />
-
-      <img
-        src={picture5}
-        style={{ height: "800px", maxWidth: "100%", objectFit: "cover" }}
-        alt="casamiento"
-      />
-
-      <img
-        src={picture6}
-        style={{ height: "800px", maxWidth: "100%", objectFit: "cover" }}
-        alt="casamiento"
-      />
-      <img
-        src={picture7}
-        style={{ height: "800px", maxWidth: "100%", objectFit: "cover" }}
-        alt="casamiento"
-      />
-
+      <Image src={picture1} alt="casamiento" />
+      <Image src={picture2} alt="casamiento" />
+      <Image src={picture3} alt="casamiento" />
+      <Image src={picture4} alt="casamiento" />
     </Carousel>
   </Container>
 );
 
-const Container = styled.div`
+const Image = styled.img`
+  height: 80%;
+  max-width: 100%;
+  object-fit: cover;
 
+  @media only screen and (max-width: 770px) {
+    padding-top: 40px;
+  }
+`;
+
+const Container = styled.div`
   .rec-arrow {
     display: none;
   }
