@@ -1,21 +1,41 @@
-import React from "react";
+import React, { useRef } from "react";
+import useObserver from "../hooks/useObserver";
 import styled from "styled-components";
+import { useTransition, useSpring, animated as a } from "react-spring";
 import { Parallax } from "react-scroll-parallax";
 import picture from "../assets/delfi&facu-min/Baja-182-min.jpg";
 import fogonero from "../assets/delfi&facu-min/Baja-269-min.jpg";
 
+
+
+
 const Complements = () => {
+  const triggerRefAbout = useRef();
+
+  const dataRef = useObserver(triggerRefAbout, {
+    freezeOnceVisible: true,
+  });
+
+  const pStyle = useSpring({
+    config: { duration: 2000 },
+    from: { opacity: 0, transform: "scale(0.1)" },
+    to: {
+      opacity: dataRef?.isIntersecting ? 1 : 0,
+      transform: "scale(1)",
+    },
+  });
+
   return (
     <>
       {" "}
-      <Parallax speed={7}>
+ 
         <SectionTitle>COMPLEMENTOS</SectionTitle>
-
+   <div ref={triggerRefAbout} />
         <SubTitle>
           Elegí las terminaciones que más vayan con tu evento y sumale los
           complementos necesarios para lograr el confort ideal.
         </SubTitle>
-      </Parallax>
+
       <Section id="complements">
         <Wrapper>
           <Parallax speed={7}>
@@ -35,11 +55,15 @@ const Complements = () => {
               <Title>ILUMINACIÓN</Title>
             </Parallax>
             <Parallax speed={8}>
-              <Text>
-                La iluminación es uno de los elementos más importantes para
-                crear un buen ambiente. Es por esto que ofrecemos guirnaldas de
-                luces para acompañar la carpa.
-              </Text>
+           
+
+              <a.div style={pStyle}>
+                <Text>
+                  La iluminación es uno de los elementos más importantes para
+                  crear un buen ambiente. Es por esto que ofrecemos guirnaldas
+                  de luces para acompañar la carpa.
+                </Text>
+              </a.div>
             </Parallax>
           </Description>
         </Wrapper>

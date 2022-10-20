@@ -12,7 +12,7 @@ const WthButton = () => {
   return (
     <>
       {width >= medium ? (
-     <a class="whatsappLink desktop" href="http://web.whatsapp.com/send?text=Tu mensaje&phone=+543446584076&abid=+543446584076" target="_blank">
+     <a className="whatsappLink desktop" href="http://web.whatsapp.com/send?text=Hola! Me gustaría alquilar la carpa para un evento.&phone=+543446584076&abid=+543446584076" target="_blank">
         <Button>
           <span style={{ paddingTop: "8px" }}>
             {" "}
@@ -24,7 +24,7 @@ const WthButton = () => {
         </a>
       ) : (
  
-          <a class="whatsappLink mobile" href="whatsapp://send?text=Tu mensaje&phone=+543446584076&abid=+543446584076" target="_blank">
+          <a className="whatsappLink mobile" href="whatsapp://send?text=Hola! Me gustaría alquilar la carpa para un evento.&phone=+543446584076&abid=+543446584076" target="_blank">
         <Button>
           <span style={{ paddingTop: "8px" }}>
             {" "}
