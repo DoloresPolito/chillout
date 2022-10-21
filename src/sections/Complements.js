@@ -41,18 +41,13 @@ const Complements = () => {
           <Parallax speed={7}>
           <SectionTitle>COMPLEMENTOS</SectionTitle>
           </Parallax>
- 
-
-      {/* <SubTitle>
-        Elegí las terminaciones que más vayan con tu evento y sumale los
-        complementos necesarios para lograr el confort ideal.
-      </SubTitle> */}
 
       <Section id="complements">
         <Wrapper>
           <Parallax speed={7}>
             <Images>
               <img
+              alt="Iluminación"
                 src={picture}
                 style={{
                   width: "90%",
@@ -98,6 +93,7 @@ const Complements = () => {
           <Parallax speed={7}>
             <Images>
               <img
+                     alt="Fogoneros"
                 src={fogonero}
                 style={{
                   width: "90%",

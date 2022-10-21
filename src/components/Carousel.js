@@ -37,7 +37,6 @@ const CarouselSection = () => {
       <Carousel
         enableAutoPlay
         autoPlaySpeed={5500}
-        // itemPadding={[0, 50]}
         itemsToShow={width >= medium ? 2 : 1}
         itemsToScroll={1}
       >
