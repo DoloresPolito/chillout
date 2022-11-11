@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 const MessageSent = () => {
     const navigate = useNavigate();
     const handleBack = () => {
-        navigate("/");
+        navigate("/chillout");
     }
   return (
     <Container>

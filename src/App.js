@@ -8,7 +8,7 @@ function App() {
   return (
     <div>
       <Routes>
-        <Route path="/" element={<Landing />} />
+        <Route path="/chillout" element={<Landing />} />
         <Route path="/message" element={<MessageSent />} />
       </Routes>
     </div>
