@@ -1,29 +1,17 @@
-import Footer from "./sections/Footer";
-import Navbar from "./sections/Navbar";
-import Form from "./sections/Form";
-import Complements from "./sections/Complements";
-import CarouselSection from "./sections/Events";
-import WhtButton from './components/WhtButton'
-import BigCarousel from './components/BigCarousel'
-import PerfectTent from "./sections/PerfectTent";
-
+import React from "react";
+import MessageSent from "./sections/MessageSent";
+import Landing from "./sections/Landing";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
-
+import { Route, Routes } from "react-router-dom";
 
 function App() {
   return (
-  
     <div>
-      <Navbar />
-      <WhtButton/>
-      <BigCarousel/>
-      <PerfectTent/>
-      <Complements/>
-      <CarouselSection />
-      <Form />
-      <Footer />
+      <Routes>
+        <Route path="/" element={<Landing />} />
+        <Route path="/message" element={<MessageSent />} />
+      </Routes>
     </div>
-
   );
 }
 

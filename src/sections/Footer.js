@@ -8,6 +8,10 @@ const Footer = () => {
     window.addEventListener('resize', () => setWidth(window.innerWidth))
   }, [])
   const medium = 600
+
+
+  const wthWidth = 1024;
+
   return (
 <>
     {width >= medium ? (
@@ -18,11 +22,45 @@ const Footer = () => {
           <i className="bi bi-envelope"></i>
         </Icon>
       </a>
-      <a href="https://www.instagram.com/carpachillout" target="_blank">
+      <a href="https://www.instagram.com/carpachillout" target="_blank" rel="noreferrer">
         <Icon>
           <i className="bi bi-instagram"></i>
         </Icon>
       </a>
+
+
+      {width >= wthWidth ? (
+        <a
+          className="whatsappLink desktop"
+          href="http://web.whatsapp.com/send?text=Hola! Me gustaría alquilar la carpa para un evento.&phone=+543446584076&abid=+543446584076"
+          target="_blank"
+          rel="noreferrer"
+        >
+
+            <Icon >
+              {" "}
+              <i className="bi bi-whatsapp"></i>
+            </Icon>
+
+        </a>
+      ) : (
+        <a
+          className="whatsappLink mobile"
+          href="whatsapp://send?text=Hola! Me gustaría alquilar la carpa para un evento.&phone=+543446584076&abid=+543446584076"
+          target="_blank"
+          rel="noreferrer"
+        >
+
+            <Icon >
+              {" "}
+              <i className="bi bi-whatsapp"></i>
+            </Icon>
+
+
+        </a>
+
+
+      )}
     
     </InfoWrapper>
     ) : (
@@ -34,11 +72,44 @@ const Footer = () => {
           <i className="bi bi-envelope"></i>
         </Icon>
       </a>
-      <a href="https://www.instagram.com/carpachillout" target="_blank">
+      <a href="https://www.instagram.com/carpachillout" target="_blank" rel="noreferrer">
         <Icon>
           <i className="bi bi-instagram"></i>
         </Icon>
       </a>
+
+      {width >= wthWidth ? (
+        <a
+          className="whatsappLink desktop"
+          href="http://web.whatsapp.com/send?text=Hola! Me gustaría alquilar la carpa para un evento.&phone=+543446584076&abid=+543446584076"
+          target="_blank"
+          rel="noreferrer"
+        >
+
+            <Icon >
+              {" "}
+              <i className="bi bi-whatsapp"></i>
+            </Icon>
+
+        </a>
+      ) : (
+        <a
+          className="whatsappLink mobile"
+          href="whatsapp://send?text=Hola! Me gustaría alquilar la carpa para un evento.&phone=+543446584076&abid=+543446584076"
+          target="_blank"
+          rel="noreferrer"
+        >
+
+            <Icon >
+              {" "}
+              <i className="bi bi-whatsapp"></i>
+            </Icon>
+
+
+        </a>
+
+
+      )}
     
     </InfoWrapperColumn>
       </>

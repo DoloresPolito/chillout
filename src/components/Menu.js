@@ -14,17 +14,23 @@ export const StyledMenu = styled.nav`
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  background: #c8c1ba;
+  background: transparent ;
   height: 100vh;
   text-align: left;
-
-  padding: 150px 100px 30px 30px;
+  padding: 100px 70px 30px 30px;
   position: absolute;
   z-index: 1;
   top: 0;
   right: 0;
   transition: transform 0.3s ease-in-out;
   transform: ${({ open }) => (open ? 'translateX(0)' : 'translateX(100%)')};
+
+
+
+  @media only screen and (max-width: 460px) {
+    padding: 80px 40px 30px 30px;
+
+  }
 `
 
 export default Menu

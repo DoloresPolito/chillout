@@ -1,25 +1,28 @@
 import React from "react";
 import styled from "styled-components";
 import Trail from "../components/Trail";
+import { Parallax } from "react-scroll-parallax";
 
 const PerfectTent = () => {
   return (
     <PerfectSection>
-      <Trail
-        data={[
-          "TENEMOS LA CARPA PERFECTA PARA VOS",
-          "TENEMOS LA CARPA PERFECTA PARA VOS",
-        ]}
-      />
+      <Parallax speed={-17}>
+        <Trail data={["TENEMOS LA CARPA PERFECTA PARA VOS"]} />
+      </Parallax>
     </PerfectSection>
   );
 };
 
 const PerfectSection = styled.section`
-  height: 200px;
-  background: white;
-  color: grey;
-  @media only screen and (max-width: 970px) {
+  position: absolute;
+  z-index: 2;
+  left: 300px;
+  top: 100px;
+  background: trasparent;
+  color: white;
+  @media only screen and (max-width: 1200px) {
+    left: 100px;
+    top: 100px;
   }
 
   .letter-changer {
@@ -27,9 +30,6 @@ const PerfectSection = styled.section`
   }
 `;
 
-const Sec = styled.span`
-  background-color: white;
-  height: 400px;
-`;
+
 
 export default PerfectTent;

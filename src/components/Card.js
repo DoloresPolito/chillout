@@ -3,11 +3,11 @@ import styled from "styled-components";
 
 const Card = ({ mode, custom, children, ...rest }) => {
   return (
-    <div>
+
       <CardContainer mode={mode} custom={custom}>
         {children}
       </CardContainer>
-    </div>
+
   );
 };
 

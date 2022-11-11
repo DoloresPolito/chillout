@@ -9,12 +9,12 @@ const Tabs = ({ mode }) => {
         to="complements"
         spy={true}
         smooth={false}
-        offset={-47}
+        offset={0}
         duration={800}
       >
         <LinkL>COMPLEMENTOS</LinkL>
       </Link>
-      <Link to="form" spy={true} smooth={false} offset={150} duration={800}>
+      <Link to="form" spy={true} smooth={false} offset={30} duration={800}>
         <LinkL>RESERVAS</LinkL>
       </Link>
       <Link to="gallery" spy={true} smooth={false} offset={-47} duration={800}>
@@ -29,7 +29,7 @@ const LinkL = styled.a`
   font-size: 13px;
   letter-spacing: 2px;
   line-height: 28px;
-  color: grey;
+  color: #f6f6f6;
   cursor: pointer;
   text-decoration: none;
   &:hover {
@@ -61,6 +61,13 @@ const TabsBox = styled.div`
       padding: 0 5px;
     }
   }
+
+  @media only screen and (max-width: 700px) {
+    a {
+      padding: 10px;
+    }
+  }
+
 `;
 
 export default Tabs;

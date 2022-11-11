@@ -29,157 +29,156 @@ const CarouselSection = () => {
   const medium = 900;
 
   return (
-    <Container>
-       <Parallax speed={6}>
-      <EventTitle>EVENTOS</EventTitle>
+    <Container id="gallery">
+      <Parallax speed={6}>
+        <EventTitle>EVENTOS</EventTitle>
       </Parallax>
       <Parallax speed={12}>
-      <Carousel
-        enableAutoPlay
-        autoPlaySpeed={5500}
-        itemsToShow={width >= medium ? 2 : 1}
-        itemsToScroll={1}
-      >
-        <Card mode="black">
-          <img
-            src={picture1}
-            style={{ height: "100%", width: "100%" }}
-            alt="casamiento"
-          />
-        </Card>
+        <Carousel
+          enableAutoPlay
+          autoPlaySpeed={5500}
+          itemsToShow={width >= medium ? 2 : 1}
+          itemsToScroll={1}
+        >
+          <Card mode="black">
+            <img
+              src={picture1}
+              style={{ height: "100%", width: "100%" }}
+              alt="casamiento"
+            />
+          </Card>
 
-        <Card mode="black">
-          <img
-            src={picture5}
-            style={{ height: "100%", width: "100%" }}
-            alt="casamiento"
-          />
-        </Card>
-        <Card mode="black">
-          <img
-            src={picture6}
-            style={{ height: "100%", width: "100%" }}
-            alt="casamiento"
-          />
-        </Card>
-        <Card mode="black">
-          <img
-            src={picture7}
-            style={{ height: "100%", width: "100%" }}
-            alt="casamiento"
-          />
-        </Card>
-        <Card mode="black">
-          <img
-            src={picture8}
-            style={{ height: "100%", width: "100%" }}
-            alt="casamiento"
-          />
-        </Card>
+          <Card mode="black">
+            <img
+              src={picture5}
+              style={{ height: "100%", width: "100%" }}
+              alt="casamiento"
+            />
+          </Card>
+          <Card mode="black">
+            <img
+              src={picture6}
+              style={{ height: "100%", width: "100%" }}
+              alt="casamiento"
+            />
+          </Card>
+          <Card mode="black">
+            <img
+              src={picture7}
+              style={{ height: "100%", width: "100%" }}
+              alt="casamiento"
+            />
+          </Card>
+          <Card mode="black">
+            <img
+              src={picture8}
+              style={{ height: "100%", width: "100%" }}
+              alt="casamiento"
+            />
+          </Card>
 
-        <Card mode="black">
-          <img
-            src={picture9}
-            style={{ height: "100%", width: "100%" }}
-            alt="casamiento"
-          />
-        </Card>
-        <Card mode="black">
-          <img
-            src={picture10}
-            style={{ height: "100%", width: "100%" }}
-            alt="casamiento"
-          />
-        </Card>
-        <Card mode="black">
-          <img
-            src={picture11}
-            style={{ height: "100%", width: "100%" }}
-            alt="casamiento"
-          />
-        </Card>
-        <Card mode="black">
-          <img
-            src={picture12}
-            style={{ height: "100%", width: "100%" }}
-            alt="casamiento"
-          />
-        </Card>
+          <Card mode="black">
+            <img
+              src={picture9}
+              style={{ height: "100%", width: "100%" }}
+              alt="casamiento"
+            />
+          </Card>
+          <Card mode="black">
+            <img
+              src={picture10}
+              style={{ height: "100%", width: "100%" }}
+              alt="casamiento"
+            />
+          </Card>
+          <Card mode="black">
+            <img
+              src={picture11}
+              style={{ height: "100%", width: "100%" }}
+              alt="casamiento"
+            />
+          </Card>
+          <Card mode="black">
+            <img
+              src={picture12}
+              style={{ height: "100%", width: "100%" }}
+              alt="casamiento"
+            />
+          </Card>
 
-        <Card mode="black">
-          <img
-            src={picture13}
-            style={{ height: "100%", width: "100%" }}
-            alt="casamiento"
-          />
-        </Card>
-        <Card mode="black">
-          <img
-            src={picture14}
-            style={{ height: "100%", width: "100%" }}
-            alt="casamiento"
-          />
-        </Card>
-        <Card mode="black">
-          <img
-            src={picture15}
-            style={{ height: "100%", width: "100%" }}
-            alt="casamiento"
-          />
-        </Card>
-        <Card mode="black">
-          <img
-            src={picture16}
-            style={{ height: "100%", width: "100%" }}
-            alt="casamiento"
-          />
-        </Card>
-        <Card mode="black">
-          <img
-            src={picture2}
-            style={{ height: "100%", width: "100%" }}
-            alt="casamiento"
-          />
-        </Card>
-        <Card mode="black">
-          <img
-            src={picture3}
-            style={{ height: "100%", width: "100%" }}
-            alt="casamiento"
-          />
-        </Card>
-        <Card mode="black">
-          <img
-            src={picture4}
-            style={{ height: "100%", width: "100%" }}
-            alt="casamiento"
-          />
-        </Card>
-        <Card mode="black">
-          <img
-            src={picture11}
-            style={{ height: "100%", width: "100%" }}
-            alt="casamiento"
-          />
-        </Card>
-      </Carousel>
+          <Card mode="black">
+            <img
+              src={picture13}
+              style={{ height: "100%", width: "100%" }}
+              alt="casamiento"
+            />
+          </Card>
+          <Card mode="black">
+            <img
+              src={picture14}
+              style={{ height: "100%", width: "100%" }}
+              alt="casamiento"
+            />
+          </Card>
+          <Card mode="black">
+            <img
+              src={picture15}
+              style={{ height: "100%", width: "100%" }}
+              alt="casamiento"
+            />
+          </Card>
+          <Card mode="black">
+            <img
+              src={picture16}
+              style={{ height: "100%", width: "100%" }}
+              alt="casamiento"
+            />
+          </Card>
+          <Card mode="black">
+            <img
+              src={picture2}
+              style={{ height: "100%", width: "100%" }}
+              alt="casamiento"
+            />
+          </Card>
+          <Card mode="black">
+            <img
+              src={picture3}
+              style={{ height: "100%", width: "100%" }}
+              alt="casamiento"
+            />
+          </Card>
+          <Card mode="black">
+            <img
+              src={picture4}
+              style={{ height: "100%", width: "100%" }}
+              alt="casamiento"
+            />
+          </Card>
+          <Card mode="black">
+            <img
+              src={picture11}
+              style={{ height: "100%", width: "100%" }}
+              alt="casamiento"
+            />
+          </Card>
+        </Carousel>
       </Parallax>
     </Container>
   );
 };
 
 const EventTitle = styled.h3`
-font-family: "GTWalsheimPro";
-font-style: normal;
+  font-family: "GTWalsheimPro";
+  font-style: normal;
   font-size: 40px;
   color: #c8c3ba;
   font-weight: 500;
   letter-spacing: 5px;
-
   display: flex;
   justify-content: center;
 
-  padding-top: 50px;
+  padding-top: 100px;
 
   @media only screen and (max-width: 700px) {
     font-size: 50px !important;
@@ -187,24 +186,54 @@ font-style: normal;
   @media only screen and (max-width: 600px) {
     font-size: 40px !important;
   }
-  @media only screen and (max-width: 470px) {
+  @media only screen and (max-width: 400px) {
     font-size: 30px !important;
   }
 `;
 
 const Container = styled.div`
+background-color: white !important;
+height:700px !important;
+
+
+
+@media only screen and (max-width: 600px) {
+  height:600px !important;
+}
+
+@media only screen and (max-width: 500px) {
+
+  height:500px !important;
+}
+
+@media only screen and (max-width: 400px) {
+  height:450px !important;
+}
+
+  @media only screen and (max-width: 560px) {
+    padding-bottom: 100px;
+    .rec.rec-arrow {
+      display:none;
+    }
+  }
+
+  @media only screen and (max-width: 960px) {
+    .rec.rec-arrow {
+      display:none;
+    }
+  }
+
   /* square buttons */
   .rec.rec-arrow {
-
     border-radius: none;
     background-color: #d6d0cb;
-    color:white;
-    margin:10px;
+    color: white;
+    margin: 10px;
   }
   /* round buttons on hover */
   .rec.rec-arrow:hover {
     border-radius: none;
-    color:grey
+    color: grey;
   }
 
   /* hide disabled buttons */
@@ -219,8 +248,29 @@ const Container = styled.div`
   }
 
   .rec.rec-pagination {
-    display: none;
+    // display: none;
   }
+
+  .rec.rec-dot_active{
+    background-color:grey !important;
+    box-shadow:none;
+  }
+
+  .rec.rec-dot{
+    background-color:#D3D3D3  ;
+    box-shadow:none;
+  }
+
+  .ecODlS{
+    color:grey;
+    border-color: grey;
+    margin:5px;
+  } 
+
+  .gyTcRd{
+    0 0 1px 3px rgb(155 155 155);
+    
+  } 
 
   .custom {
     display: flex;

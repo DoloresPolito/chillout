@@ -15,7 +15,7 @@ class TypeWriter extends React.PureComponent {
   componentDidMount() {
     this.unmounted = false;
     this.loopNum = 0;
-    this.period = 5000;
+    this.period = 10000;
     this.isDeleting = false;
     this.tick();
   }
@@ -40,7 +40,7 @@ class TypeWriter extends React.PureComponent {
       newText = fullTxt.substring(0, this.state.text.length + 1);
     }
 
-    let delta = 200 - Math.random() * 100;
+    let delta = 300 - Math.random() * 100;
 
     if (this.isDeleting) {
       delta /= 2;
@@ -68,8 +68,8 @@ class TypeWriter extends React.PureComponent {
 }
 
 const Type = styled.span`
-  background: white;
-  color: grey;
+  background: trasparent;
+  color: #f6f6f6;
   display: flex;
   justify-content: center;
   align-items:center;

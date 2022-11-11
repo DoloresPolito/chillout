@@ -2,39 +2,40 @@ import React, { useState } from "react";
 import emailjs from "emailjs-com";
 import styled from "styled-components";
 import { Parallax } from "react-scroll-parallax";
+import { useNavigate } from "react-router-dom";
 import "../App.css";
 
 const Form = () => {
-  const path = window.location.pathname;
+
+  const navigate = useNavigate();
 
   const frmContact = {
     userName: ``,
     userEmail: ``,
+    userPhone: ``,
     date: ``,
     place: ``,
     message: ``,
   };
   const [contact, setContact] = useState("");
-  const [showMessage, setShowMessage] = useState(false);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
     setContact({ ...contact, [name]: value });
   };
 
+
+
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    console.log("contact", contact);
-    console.log("frmContact", frmContact);
-
     emailjs
-      .send(`service_lsilwkf`, `template_zefnjzw`, contact, `F-wmz4d9VI_6zEds5`)
+      .send(`service_lsilwkf`, `template_kirhqyk`, contact, `F-wmz4d9VI_6zEds5`)
       .then(
         (response) => {
           console.log(`SUCCESS!`, response.status, response.text);
           setContact(frmContact);
-          setShowMessage(true);
+          navigate("/message");
         },
         (err) => {
           console.log(`FAILED...`, err);
@@ -43,56 +44,65 @@ const Form = () => {
   };
   return (
     <>
-      <Parallax speed={-8}>
-        <Title>COTIZÁ TU EVENTO</Title>
-        <FormWrapper id="form">
-          <StyledForm onSubmit={handleSubmit}>
-            <Input
-              placeholder="NOMBRE Y APELLIDO"
-              type="text"
-              required
-              value={contact.userName}
-              name="userName"
-              onChange={handleChange}
-            />
+      <FormWrapper id="form">
+        <StyledForm>
+          <Parallax speed={5}>
+            <Title>COTIZÁ TU EVENTO</Title>
+          </Parallax>
+          <Input
+            placeholder="NOMBRE Y APELLIDO"
+            type="text"
+            required
+            value={contact.userName}
+            name="userName"
+            onChange={handleChange}
+          />
 
-            <Input
-              placeholder="EMAIL"
-              value={contact.userEmail}
-              onChange={handleChange}
-              name="userEmail"
-              type="text"
-              required
-            />
+          <Input
+            placeholder="EMAIL"
+            value={contact.userEmail}
+            onChange={handleChange}
+            name="userEmail"
+            type="text"
+            required
+          />
+              <Input
+            placeholder="TELÉFONO"
+            value={contact.userPhone}
+            onChange={handleChange}
+            name="userPhone"
+            type="text"
+            required
+          />
 
-            <Input
-              placeholder="LUGAR"
-              value={contact.place}
-              onChange={handleChange}
-              name="place"
-              type="text"
-              required
-            />
+          <Input
+            placeholder="LUGAR"
+            value={contact.place}
+            onChange={handleChange}
+            name="place"
+            type="text"
+            required
+          />
 
-            <Input
-              placeholder="FECHA"
-              type="text"
-              required
-              value={contact.date}
-              name="date"
-              onChange={handleChange}
-            />
+          <Input
+            placeholder="FECHA"
+            type="text"
+            required
+            value={contact.date}
+            name="date"
+            onChange={handleChange}
+          />
 
-            <Input
-              name="message"
-              placeholder="MENSAJE"
-              onChange={handleChange}
-              type="text"
-              required
-              value={contact.message}
-            />
+          <Input
+            name="message"
+            placeholder="MENSAJE"
+            onChange={handleChange}
+            type="text"
+            required
+            value={contact.message}
+          />
 
-            <br />
+          {/* <br />
             <br />
             <h4 className="adicionales">ADICIONALES</h4>
 
@@ -119,18 +129,19 @@ const Form = () => {
               PAGINA WEB
               <input type="checkbox" />
               <span className="checkmark"></span>
-            </label>
+            </label> */}
 
-            <Button type="submit">ENVIAR</Button>
-          </StyledForm>
-        </FormWrapper>
-      </Parallax>
+          <Button onClick={handleSubmit}>ENVIAR</Button>
+        </StyledForm>
+
+
+      </FormWrapper>
     </>
   );
 };
 
 const Title = styled.h3`
-  margin-top: 120px;
+  padding-bottom: 40px;
   font-family: "GTWalsheimPro";
   font-style: normal;
   font-size: 40px;
@@ -198,7 +209,7 @@ const Input = styled.input`
   border: none;
   border-bottom: 1px solid #fff;
   outline: none;
-  color: red;
+  color: grey;
   font-size: 15px;
 
   @media only screen and (max-width: 1200px) {

@@ -12,70 +12,88 @@ const WthButton = () => {
   return (
     <>
       {width >= medium ? (
-     <a className="whatsappLink desktop" href="http://web.whatsapp.com/send?text=Hola! Me gustaría alquilar la carpa para un evento.&phone=+543446584076&abid=+543446584076" target="_blank">
-        <Button>
-          <span style={{ paddingTop: "8px" }}>
-            {" "}
-            <i className="bi bi-whatsapp"></i>
-          </span>
+        <a
+          className="whatsappLink desktop"
+          href="http://web.whatsapp.com/send?text=Hola! Me gustaría alquilar la carpa para un evento.&phone=+543446584076&abid=+543446584076"
+          target="_blank"
+        >
 
-          <Text>Escribinos por WhatsApp</Text>
-        </Button>
+            <Icon >
+              {" "}
+              <i className="bi bi-whatsapp"></i>
+            </Icon>
+
         </a>
       ) : (
- 
-          <a className="whatsappLink mobile" href="whatsapp://send?text=Hola! Me gustaría alquilar la carpa para un evento.&phone=+543446584076&abid=+543446584076" target="_blank">
-        <Button>
-          <span style={{ paddingTop: "8px" }}>
-            {" "}
-            <i className="bi bi-whatsapp"></i>
-          </span>
+        <a
+          className="whatsappLink mobile"
+          href="whatsapp://send?text=Hola! Me gustaría alquilar la carpa para un evento.&phone=+543446584076&abid=+543446584076"
+          target="_blank"
+        >
 
-          <Text>Escribinos por WhatsApp</Text>
-        </Button>
+            <Icon >
+              {" "}
+              <i className="bi bi-whatsapp"></i>
+            </Icon>
+
+
         </a>
+
+
       )}
     </>
   );
 };
 
+const Icon = styled.a`
+  color: grey;
+  font-size: 1.2em;
+  padding-left: 20px;
+  cursor: pointer;
+
+  &:hover {
+    color: white;
+  }
+`;
+
 const Button = styled.button`
   z-index: 100;
   background: transparent;
-  background: #c8c1ba;
-  border: 2px solid black;
-  border-color: #c8c1ba;
+  // background: #c8c1ba;
+  border-radius:35px;
+  border: none;
+  // border-color: grey;
   position: fixed;
   bottom: 15px;
   left: 15px;
-  width: 20%;
   display: flex;
   justify-content: center;
   align-item: center;
-  color: white;
+  color: grey;
   box-shadow: none;
-  width: 260px;
+  width: 50px;
+  height:30px;
   font-weight: 500;
 
   @media only screen and (max-width: 1120px) {
     font-size: 14px;
-    width: 25%;
+
   }
   @media only screen and (max-width: 860px) {
     font-size: 14px;
-    width: 30%;
+ 30%;
   }
   @media only screen and (max-width: 715px) {
     font-size: 12px;
-    width: 35%;
+  
   }
   @media only screen and (max-width: 550px) {
     font-size: 12px;
-    width: 50%;
+
   }
   @media only screen and (max-width: 380px) {
     font-size: 12px;
-    width: 60%;
+
   }
 `;
 

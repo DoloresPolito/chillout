@@ -38,11 +38,13 @@ const Complements = () => {
   });
   return (
     <>
-          <Parallax speed={7}>
-          <SectionTitle>COMPLEMENTOS</SectionTitle>
-          </Parallax>
+     
 
       <Section id="complements">
+
+      <Parallax speed={7}>
+          <SectionTitle>COMPLEMENTOS</SectionTitle>
+          </Parallax>
         <Wrapper>
           <Parallax speed={7}>
             <Images>
@@ -113,9 +115,10 @@ const SectionTitle = styled.h3`
 font-family: "GTWalsheimPro";
 font-style: normal;
   padding-top: 80px;
+  background-color: #d6d2ce;
 
   font-size: 40px;
-  color: white;
+  color: grey;
   font-weight: 500;
   margin-top: 40px;
   margin-bottom: 40px;

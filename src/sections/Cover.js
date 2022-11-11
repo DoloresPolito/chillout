@@ -2,6 +2,10 @@ import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import picture from "../assets/casamientotoia-min/portada-final.jpeg";
 import smallPicture from "../assets/casamientotoia-min/portada-cortada.jpeg";
+import Menu from '../components/Menu'
+import Tabs from '../components/Tabs'
+import Hamburger from 'hamburger-react'
+import { Container } from '../styles/texts'
 
 const Cover = () => {
   const [width, setWidth] = useState(window.innerWidth);
@@ -11,10 +15,28 @@ const Cover = () => {
   const medium = 950;
   return (
     <CoverWrapper>
+          {/* <NavbarSection>
+      <NavbarContainer className={!isOpen && 'isClosed'}> */}
+        {/* {width >= medium ? (
+          <Tabs mode={'large'} />
+        ) : (
+          <>
+            <Hamburger toggled={isOpen} toggle={setOpen} direction="right" />
+            <Menu open={isOpen} />
+          </>
+        )} */}
+      {/* </NavbarContainer>
+    </NavbarSection> */}
+
       {width >= medium ? (
+        <>
+         <Tabs mode={'large'} />
         <Image src={picture}></Image>
+        </>
       ) : (
         <>
+           <Hamburger toggled={isOpen} toggle={setOpen} direction="right" />
+            <Menu open={isOpen} />
           <Image src={smallPicture}></Image>
         </>
       )}
